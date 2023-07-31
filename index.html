@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+<!-- Navbar -->
+<nav class="m-8 mb-20">
+  <!-- Container -->
+  <div class="container flex justify-between items-end">
+    <!-- Left nav group -->
+    <div>
+      <ul class="list-none flex items-center gap-10">
+        <div>
+          <img src="./assets/images/logo.svg" alt="snap logo">
+        </div>
+        <div class="flex gap-1 items-center">
+          <li>Features</li>
+          <div>
+            <img src="./assets/images/icon-arrow-down.svg" alt="down arrow">
+          </div>
+        </div>
+        <div class="flex gap-1 items-center">
+          <li>Company</li>
+          <div>
+            <img src="./assets/images/icon-arrow-down.svg" alt="down arrow">
+          </div>
+        </div>
+        <li>Careers</li>
+        <li>About</li>
+      </ul>
+    </div>
+    <!-- Right nav group -->
+    <div class="flex gap-12">
+      <button>Login</button>
+      <button class="px-5 py-2 border-2 border-gray-400 rounded-lg">Register</button>
+    </div>
+  </div>
+</nav>
+<!-- Main -->
+<main class="m-24">
+  <!-- Container -->
+  <div class="flex flex-row gap-14">
+    <!-- Left main group -->
+    <div>
+      <h1 class="text-7xl font-bold my-16">Make <br> remote work</h1>
+      <p>Get your team in sync, no matter your location. <br> Streamline processes, 
+        create team rituals, <br> and watch productivity soar.</p>
+        <button class="my-14 px-6 py-3 bg-black text-white font-medium rounded-lg">Learn more</button>
+          <!-- Clients list -->
+          <ul class="list-none flex flex-row gap-5 mt-10">
+            <li>
+              <img src="./assets/images/client-databiz.svg" alt="Data biz">
+            </li>
+            <li>
+              <img src="./assets/images/client-audiophile.svg" alt="Audiophile">
+            </li>
+            <li>
+              <img src="./assets/images/client-meet.svg" alt="Meet">
+            </li>
+            <li>
+              <img src="./assets/images/client-maker.svg" alt="Maker">
+            </li>
+          </ul>
+    </div>
+    <!-- Right main group -->
+    <div>
+      <!-- Hero img -->
+      <img src="./assets/images/image-hero-desktop.png" alt="Hero image">
+    </div>
+  </div>
+</main>
+<!-- Attribution -->
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Yarden Tal</a>.
+  </div>
+</body>
+</html>
