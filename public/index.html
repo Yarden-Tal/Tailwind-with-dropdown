@@ -15,29 +15,31 @@
 </head>
 <body>
 <!-- Navbar -->
-<nav class="m-8 mb-20">
+<nav class="m-4 mb-0">
   <!-- Container -->
-  <div class="container flex justify-between items-center">
+  <div class="container flex justify-between items-center mx-auto">
     <!-- Left nav group -->
     <div>
       <ul class="list-none flex items-center gap-10">
-        <div class="mt-1.5">
-          <img src="./assets/images/logo.svg" alt="snap logo">
-        </div>
-        <div class="flex gap-1 items-center">
-          <li>Features</li>
-          <div>
-            <img src="./assets/images/icon-arrow-down.svg" alt="down arrow">
+        <li class="cursor-pointer">
+          <div class="mt-1.5 relative right-4">
+            <img src="./assets/images/logo.svg" alt="snap">
           </div>
-        </div>
-        <div class="flex gap-1 items-center">
-          <li>Company</li>
+        </li>
+        <li class="cursor-pointer opacity-60 flex gap-1 items-center hover:opacity-100 font-medium">
+          <p>Features</p>
           <div>
-            <img src="./assets/images/icon-arrow-down.svg" alt="down arrow">
+            <img src="./assets/images/icon-arrow-down.svg" alt="arrow">
           </div>
-        </div>
-        <li>Careers</li>
-        <li>About</li>
+        </li>
+        <li class="cursor-pointer opacity-60 flex gap-1 items-center hover:opacity-100 font-medium">
+          <p>Company</p>
+          <div>
+            <img src="./assets/images/icon-arrow-down.svg" alt="arrow">
+          </div>
+        </li>
+        <li class="cursor-pointer opacity-60 hover:opacity-100 font-medium">Careers</li>
+        <li class="cursor-pointer opacity-60 hover:opacity-100 font-medium">About</li>
       </ul>
     </div>
     <!-- Right nav group -->
