@@ -1,3 +1,27 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
+@layer components {
+  .yt-opacity {
+    @apply opacity-60 hover:opacity-100;
+  }
+  .dropdown-opener {
+    @apply cursor-pointer font-medium;
+  }
+  .dropdown {
+    @apply bg-white absolute top-16 p-5 rounded-xl shadow-2xl;
+  }
+  .f-dropdown-li {
+    @apply flex items-center gap-4;
+  }
+  .dropdown-ul {
+    @apply flex flex-col gap-4;
+  }
+  .simple-li {
+    @apply cursor-pointer yt-opacity font-medium;
+  }
+  .register-btn {
+    @apply px-5 py-2 border-2 border-gray-400 rounded-lg hover:border-black;
+  }
+}
