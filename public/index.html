@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/main.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <script defer src="./script.js"></script>
   <title>Frontend Mentor | Intro section with dropdown navigation</title>
 
   <style>
@@ -26,13 +26,15 @@
             <img src="./assets/images/logo.svg" alt="snap">
           </div>
         </li>
-        <li class="cursor-pointer flex gap-1 items-center font-medium">
-          <p class="opacity-60 hover:opacity-100">Features</p>
-          <div class="opacity-60 hover:opacity-100">
-            <img src="./assets/images/icon-arrow-down.svg" alt="arrow">
+        <li class="cursor-pointer font-medium">
+          <div class="opacity-60 hover:opacity-100 flex gap-1 items-center">
+            <p>Features</p>
+            <div>
+              <img src="./assets/images/icon-arrow-down.svg" alt="arrow">
+            </div>
           </div>
           <!-- Dropdown 1 -->
-          <div class="bg-white absolute top-20 left-[8rem] p-5 rounded-xl shadow-2xl">
+          <div class="bg-white absolute top-20 left-[8rem] p-5 rounded-xl shadow-2xl hidden">
             <ul class="flex flex-col gap-4">
               <li class="flex items-center gap-4">
                 <div>
@@ -61,13 +63,15 @@
             </ul>
           </div>
         </li>
-        <li class="cursor-pointer flex gap-1 items-center font-medium">
-          <p class="opacity-60 hover:opacity-100">Company</p>
-          <div class="opacity-60 hover:opacity-100">
-            <img src="./assets/images/icon-arrow-down.svg" alt="arrow">
+        <li class="cursor-pointer font-medium">
+          <div class="opacity-60 hover:opacity-100 flex gap-1 items-center">
+            <p>Company</p>
+            <div>
+              <img src="./assets/images/icon-arrow-down.svg" alt="arrow">
+            </div>
           </div>
-          <!-- Dropdown 2 -->
-          <div class="bg-white absolute top-20 left-[20rem] p-5 rounded-xl shadow-2xl">
+          <!-- Dropdown 1 -->
+          <div class="bg-white absolute top-20 left-[20rem] p-5 rounded-xl shadow-2xl hidden">
             <ul class="flex flex-col gap-4">
               <li>
                 <p class="opacity-60 hover:opacity-100">History</p>
