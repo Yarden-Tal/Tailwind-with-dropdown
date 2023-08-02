@@ -764,6 +764,22 @@ video {
   gap: 1.25rem;
 }
 
+.dialog-el {
+  margin: 0px;
+  margin-left: auto;
+  height: 100vh;
+  width: 70%;
+  padding: 0px;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+@media (min-width: 768px) {
+  .dialog-el {
+    display: none;
+  }
+}
+
 .relative {
   position: relative;
 }
@@ -783,10 +799,6 @@ video {
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
-}
-
-.-mb-\[1\.1rem\] {
-  margin-bottom: -1.1rem;
 }
 
 .mt-1 {

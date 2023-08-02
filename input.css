@@ -48,4 +48,7 @@
   .client-ul {
     @apply list-none flex flex-row gap-5 mt-10;
   }
+  .dialog-el {
+    @apply m-0 ml-auto p-0 md:hidden w-[70%] h-screen outline-none;
+  }
 }

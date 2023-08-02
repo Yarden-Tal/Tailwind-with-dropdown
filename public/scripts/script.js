@@ -41,6 +41,7 @@ document.addEventListener("DOMContentLoaded", () =>
 
 const mobileMenuBtn = document.querySelector("#mobile-menu-btn");
 const mobileImg = document.querySelector("#mobile-img");
+const dialog = document.querySelector("dialog");
 
 const toggleMobileMenuIcon = () => {
   const burgerImgSrc = "./assets/svg/burger.svg";
@@ -50,7 +51,7 @@ const toggleMobileMenuIcon = () => {
 };
 
 const toggleMobileMenu = () => {
-  
+  dialog.showModal()
 }
 
 mobileMenuBtn.addEventListener("click", () => {
