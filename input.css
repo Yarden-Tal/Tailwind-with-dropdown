@@ -25,6 +25,27 @@
     @apply px-5 py-2 border-2 border-gray-400 rounded-lg hover:border-black;
   }
   .learn-more-btn {
-    @apply my-14 px-6 py-3 bg-black text-white font-medium rounded-lg hover:bg-white hover:text-black border-2 hover:border-black;
+    @apply my-14 max-md:my-7 px-6 py-3 bg-black text-white font-medium rounded-lg hover:bg-white hover:text-black border-2 hover:border-black;
+  }
+  .main-el {
+    @apply mx-36 max-md:mx-0 my-20;
+  }
+  .main-inner {
+    @apply flex flex-row items-center gap-14 max-md:gap-0 max-md:flex-col-reverse;
+  }
+  .main-left {
+    @apply flex-1 flex flex-col items-start max-md:p-5 max-md:text-center max-md:items-center;
+  }
+  .main-title {
+    @apply text-7xl max-md:text-4xl font-bold my-16 max-md:my-6;
+  }
+  .desktop-nav {
+    @apply m-4 mb-0 max-md:hidden;
+  }
+  .mobile-nav {
+    @apply block md:hidden max-md:flex justify-between items-center p-3;
+  }
+  .client-ul {
+    @apply list-none flex flex-row gap-5 mt-10;
   }
 }

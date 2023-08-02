@@ -5,19 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/main.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  <script defer src="./script.js"></script>
+  <script defer type="module" src="./scripts/script.js"></script>
   <title>Frontend Mentor | Intro section with dropdown navigation</title>
-
+  <!-- Frontend mentor pre-added styles  -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
-<body class="bg-[#FAFAFA]">
-  
+
+<body class="bg-[#FAFAFA]">  
   <header>
   <!-- DESKTOP Navbar -->
-  <nav class="m-4 mb-0 max-md:hidden">
+  <nav class="desktop-nav">
     <!-- Container -->
     <div class="container flex justify-between items-center mx-auto">
       <!-- Left nav group -->
@@ -99,33 +99,31 @@
     </div>
   </nav>
   <!-- MOBILE Navbar -->
-  <nav class="block md:hidden max-md:flex justify-between items-center p-3">
+  <nav class="mobile-nav">
     <div class="cursor-pointer">
       <div>
         <img src="./assets/images/logo.svg" alt="snap">
       </div>
     </div>
-    <div class="font-medium flex flex-col items-center justify-center">
-      <span class="-mb-[1.1rem]">__</span>
-      <span class="-mb-[1.1rem]">__</span>
-      <span>__</span>
+    <div id="mobile-menu-btn" class="font-medium flex flex-col items-center justify-center">
+      <img id="mobile-img" src="./assets/svg/burger.svg" alt="menu">
     </div>
   </nav>
 
 </header>
 
 <!-- Main -->
-<main class="mx-36 max-md:mx-0 my-20">
+<main class="main-el">
   <!-- Container -->
-  <div class="flex flex-row items-center gap-14 max-md:flex-col-reverse">
+  <div class="main-inner">
     <!-- Left main group -->
-    <div class="flex-1 flex flex-col items-start max-md:p-5 max-md:text-center max-md:items-center">
-      <h1 class="text-7xl max-md:text-4xl font-bold my-16">Make <br class="max-md:hidden"> remote work</h1>
+    <div class="main-left">
+      <h1 class="main-title">Make <br class="max-md:hidden"> remote work</h1>
       <p>Get your team in sync, no matter your location. <br> Streamline processes, 
         create team rituals, <br> and watch productivity soar.</p>
         <button class="learn-more-btn">Learn more</button>
           <!-- Clients list -->
-          <ul class="list-none flex flex-row gap-5 mt-10">
+          <ul class="client-ul">
             <li>
               <img src="./assets/images/client-databiz.svg" alt="Data biz">
             </li>
@@ -141,7 +139,7 @@
           </ul>
     </div>
     <!-- Right main group -->
-    <div class="flex-1 max-md:p-5">
+    <div class="flex-1">
       <!-- Hero img -->
       <img src="./assets/images/image-hero-desktop.png" alt="Hero image">
     </div>

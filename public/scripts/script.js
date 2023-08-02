@@ -1,3 +1,5 @@
+/* DESKTOP */
+
 const featuresMenuItem = document.querySelector("#features-menu-item");
 const featuresDropdown = document.querySelector("#features-dropdown");
 const companyMenuItem = document.querySelector("#company-menu-item");
@@ -20,7 +22,10 @@ const setupDropdownEventListeners = () => {
     });
 
     menuItem.addEventListener("mouseleave", () => {
-      dropdownTimeout = setTimeout(() => dropdown.classList.add("hidden"), mouseLeaveDelay);
+      dropdownTimeout = setTimeout(
+        () => dropdown.classList.add("hidden"),
+        mouseLeaveDelay
+      );
     });
   };
 
@@ -28,4 +33,27 @@ const setupDropdownEventListeners = () => {
   addDropdownEventListeners(companyMenuItem, companyDropdown);
 };
 
-document.addEventListener("DOMContentLoaded", () => setupDropdownEventListeners());
+document.addEventListener("DOMContentLoaded", () =>
+  setupDropdownEventListeners()
+);
+
+/* MOBILE */
+
+const mobileMenuBtn = document.querySelector("#mobile-menu-btn");
+const mobileImg = document.querySelector("#mobile-img");
+
+const toggleMobileMenuIcon = () => {
+  const burgerImgSrc = "./assets/svg/burger.svg";
+  const closeImgSrc = "./assets/svg/close.svg";
+  if (mobileImg.src.includes("burger.svg")) mobileImg.src = closeImgSrc;
+  else mobileImg.src = burgerImgSrc;
+};
+
+const toggleMobileMenu = () => {
+  
+}
+
+mobileMenuBtn.addEventListener("click", () => {
+  toggleMobileMenuIcon();
+  toggleMobileMenu()
+});
