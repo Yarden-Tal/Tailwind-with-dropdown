@@ -48,7 +48,9 @@ const mobileFeaturesDropdown = document.querySelector("#features-dropdown-mobile
 const mobileCompanyMenuItem = document.querySelector("#company-menu-item-mobile");
 const mobileCompanyDropdown = document.querySelector("#company-dropdown-mobile");
 
+// Menu toggle
 const toggleMobileMenu = () => dialog.showModal();
+
 mobileMenuBtn.addEventListener("click", () => toggleMobileMenu());
 
 const hideMobileDropdowns = () => {
@@ -61,9 +63,9 @@ dialogCloseBtn.addEventListener("click", () => {
   hideMobileDropdowns();
 });
 
+// Dropdowns toggle
 const toggleMobileDropdown = (el) => el.classList.toggle("hidden");
 
 mobileFeaturesMenuItem.addEventListener("click", () => toggleMobileDropdown(mobileFeaturesDropdown));
 mobileCompanyMenuItem.addEventListener("click", () => toggleMobileDropdown(mobileCompanyDropdown));
-
 dialog.onclose(() => hideMobileDropdowns());
