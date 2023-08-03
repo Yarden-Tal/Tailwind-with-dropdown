@@ -68,4 +68,4 @@ const toggleMobileDropdown = (el) => el.classList.toggle("hidden");
 
 mobileFeaturesMenuItem.addEventListener("click", () => toggleMobileDropdown(mobileFeaturesDropdown));
 mobileCompanyMenuItem.addEventListener("click", () => toggleMobileDropdown(mobileCompanyDropdown));
-dialog.onclose(() => hideMobileDropdowns());
+dialog.addEventListener("close",() => hideMobileDropdowns());
