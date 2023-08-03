@@ -38,19 +38,48 @@ document.addEventListener("DOMContentLoaded", () =>
 );
 
 /* MOBILE */
-
 const mobileMenuBtn = document.querySelector("#mobile-menu-btn");
 const dialog = document.querySelector("dialog");
-const dialogCloseBtn = document.querySelector("#dialog-close-btn")
+const dialogCloseBtn = document.querySelector("#dialog-close-btn > button");
+const mobileFeaturesMenuItem = document.querySelector("#features-menu-item-mobile");
+const mobileFeaturesDropdown = document.querySelector("#features-dropdown-mobile");
+const mobileCompanyMenuItem = document.querySelector("#company-menu-item-mobile");
+const mobileCompanyDropdown = document.querySelector("#company-dropdown-mobile");
 
 const toggleMobileMenu = () => {
-  dialog.showModal()
-}
+  dialog.showModal();
+};
 
 mobileMenuBtn.addEventListener("click", () => {
-  toggleMobileMenu()
+  toggleMobileMenu();
 });
 
-dialogCloseBtn.addEventListener('click', () => {
+dialogCloseBtn.addEventListener("click", () => {
   dialog.close();
-})
+  hideMobileDropdowns();
+});
+
+mobileFeaturesMenuItem.addEventListener("click", () => {
+  toggleMobileFeaturesDropdown();
+});
+
+mobileCompanyMenuItem.addEventListener("click", () => {
+  toggleMobileCompanyDropdown();
+});
+
+const hideMobileDropdowns = () => {
+  mobileFeaturesDropdown.classList.add("hidden");
+  mobileCompanyDropdown.classList.add("hidden");
+};
+
+const toggleMobileFeaturesDropdown = () => {
+  mobileFeaturesDropdown.classList.toggle("hidden");
+};
+
+const toggleMobileCompanyDropdown = () => {
+  mobileCompanyDropdown.classList.toggle("hidden");
+};
+
+dialog.addEventListener("close", () => {
+  hideMobileDropdowns();
+});
