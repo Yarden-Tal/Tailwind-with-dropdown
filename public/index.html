@@ -112,13 +112,12 @@
     <dialog class="dialog-el">
       <div id="dialog-inner" class="h-full">   
         <!-- Close btn -->
-        <div class="text-right p-3" id="dialog-close-btn">
+        <div class="text-right p-3 h-[8%]" id="dialog-close-btn">
           <button>
             <img class="ml-auto" src="./assets/svg/close.svg" alt="menu">
           </button>
         </div>
-        <!-- UL -->
-        <ul class="list-none flex flex-col gap-4">
+        <ul class="list-none flex flex-col gap-4 p-7 h-[92%]">
           <li class="dropdown-opener" id="features-menu-item-mobile">
             <div class="yt-opacity flex gap-1 items-center">
               <p>Features</p>
@@ -128,7 +127,7 @@
             </div>
             <!-- Dropdown 1 -->
             <div id="features-dropdown-mobile" class="hidden">
-              <ul class="dropdown-ul">
+              <ul class="dropdown-ul mt-6 ml-5">
                 <li class="f-dropdown-li">
                   <div>
                     <img src="./assets/images/icon-todo.svg" alt="Todo List">
@@ -165,7 +164,7 @@
             </div>
             <!-- Dropdown 2 -->
             <div id="company-dropdown-mobile" class="hidden">
-              <ul class="dropdown-ul">
+              <ul class="dropdown-ul mt-6 ml-5">
                 <li>
                   <p class="yt-opacity">History</p>
                 </li>
@@ -180,6 +179,10 @@
           </li>
           <li class="simple-li">Careers</li>
           <li class="simple-li">About</li>
+          <div class="flex flex-col gap-4">
+            <button class="yt-opacity">Login</button>
+            <button class="yt-opacity register-btn">Register</button>
+          </div>
         </ul>
       </div>
     </dialog>
