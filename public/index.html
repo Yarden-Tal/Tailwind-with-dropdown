@@ -110,76 +110,78 @@
     </button>
     <!-- Mobile Menu -->
     <dialog class="dialog-el">
-      <!-- Close btn -->
-      <div class="text-right p-3" id="dialog-close-btn">
-        <button>
-          <img class="ml-auto" src="./assets/svg/close.svg" alt="menu">
-        </button>
+      <div id="dialog-inner" class="h-full">   
+        <!-- Close btn -->
+        <div class="text-right p-3" id="dialog-close-btn">
+          <button>
+            <img class="ml-auto" src="./assets/svg/close.svg" alt="menu">
+          </button>
+        </div>
+        <!-- UL -->
+        <ul class="list-none flex flex-col gap-4">
+          <li class="dropdown-opener" id="features-menu-item-mobile">
+            <div class="yt-opacity flex gap-1 items-center">
+              <p>Features</p>
+              <div>
+                <img src="./assets/images/icon-arrow-down.svg" alt="arrow">
+              </div>
+            </div>
+            <!-- Dropdown 1 -->
+            <div id="features-dropdown-mobile" class="hidden">
+              <ul class="dropdown-ul">
+                <li class="f-dropdown-li">
+                  <div>
+                    <img src="./assets/images/icon-todo.svg" alt="Todo List">
+                  </div>
+                  <p class="yt-opacity">Todo List</p>
+                </li>
+                <li class="f-dropdown-li">
+                  <div>
+                    <img src="./assets/images/icon-calendar.svg" alt="Calender">
+                  </div>
+                  <p class="yt-opacity">Calender</p>
+                </li>
+                <li class="f-dropdown-li">
+                  <div>
+                    <img src="./assets/images/icon-reminders.svg" alt="Reminders">
+                  </div>
+                  <p class="yt-opacity">Reminders</p>
+                </li>
+                <li class="f-dropdown-li">
+                  <div>
+                    <img src="./assets/images/icon-planning.svg" alt="Planning">
+                  </div>
+                  <p class="yt-opacity">Planning</p>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="dropdown-opener" id="company-menu-item-mobile">
+            <div class="yt-opacity flex gap-1 items-center">
+              <p>Company</p>
+              <div>
+                <img src="./assets/images/icon-arrow-down.svg" alt="arrow">
+              </div>
+            </div>
+            <!-- Dropdown 2 -->
+            <div id="company-dropdown-mobile" class="hidden">
+              <ul class="dropdown-ul">
+                <li>
+                  <p class="yt-opacity">History</p>
+                </li>
+                <li>
+                  <p class="yt-opacity">Our Team</p>
+                </li>
+                <li>
+                  <p class="yt-opacity">Blog</p>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="simple-li">Careers</li>
+          <li class="simple-li">About</li>
+        </ul>
       </div>
-      <!-- UL -->
-      <ul class="list-none flex flex-col gap-4">
-        <li class="dropdown-opener" id="features-menu-item-mobile">
-          <div class="yt-opacity flex gap-1 items-center">
-            <p>Features</p>
-            <div>
-              <img src="./assets/images/icon-arrow-down.svg" alt="arrow">
-            </div>
-          </div>
-          <!-- Dropdown 1 -->
-          <div id="features-dropdown-mobile" class="hidden">
-            <ul class="dropdown-ul">
-              <li class="f-dropdown-li">
-                <div>
-                  <img src="./assets/images/icon-todo.svg" alt="Todo List">
-                </div>
-                <p class="yt-opacity">Todo List</p>
-              </li>
-              <li class="f-dropdown-li">
-                <div>
-                  <img src="./assets/images/icon-calendar.svg" alt="Calender">
-                </div>
-                <p class="yt-opacity">Calender</p>
-              </li>
-              <li class="f-dropdown-li">
-                <div>
-                  <img src="./assets/images/icon-reminders.svg" alt="Reminders">
-                </div>
-                <p class="yt-opacity">Reminders</p>
-              </li>
-              <li class="f-dropdown-li">
-                <div>
-                  <img src="./assets/images/icon-planning.svg" alt="Planning">
-                </div>
-                <p class="yt-opacity">Planning</p>
-              </li>
-            </ul>
-          </div>
-        </li>
-        <li class="dropdown-opener" id="company-menu-item-mobile">
-          <div class="yt-opacity flex gap-1 items-center">
-            <p>Company</p>
-            <div>
-              <img src="./assets/images/icon-arrow-down.svg" alt="arrow">
-            </div>
-          </div>
-          <!-- Dropdown 2 -->
-          <div id="company-dropdown-mobile" class="hidden">
-            <ul class="dropdown-ul">
-              <li>
-                <p class="yt-opacity">History</p>
-              </li>
-              <li>
-                <p class="yt-opacity">Our Team</p>
-              </li>
-              <li>
-                <p class="yt-opacity">Blog</p>
-              </li>
-            </ul>
-          </div>
-        </li>
-        <li class="simple-li">Careers</li>
-        <li class="simple-li">About</li>
-      </ul>
     </dialog>
   </nav>
 

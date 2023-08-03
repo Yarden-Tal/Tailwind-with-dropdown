@@ -37,11 +37,10 @@ document.addEventListener("DOMContentLoaded", () =>
   setupDropdownEventListeners()
 );
 
-
 /* MOBILE */
-
 const mobileMenuBtn = document.querySelector("#mobile-menu-btn");
 const dialog = document.querySelector("dialog");
+const dialogInner = document.querySelector("#dialog-inner");
 const dialogCloseBtn = document.querySelector("#dialog-close-btn > button");
 const mobileFeaturesMenuItem = document.querySelector("#features-menu-item-mobile");
 const mobileFeaturesDropdown = document.querySelector("#features-dropdown-mobile");
@@ -68,4 +67,14 @@ const toggleMobileDropdown = (el) => el.classList.toggle("hidden");
 
 mobileFeaturesMenuItem.addEventListener("click", () => toggleMobileDropdown(mobileFeaturesDropdown));
 mobileCompanyMenuItem.addEventListener("click", () => toggleMobileDropdown(mobileCompanyDropdown));
-dialog.addEventListener("close",() => hideMobileDropdowns());
+
+// Outclick closing
+document.addEventListener("click", (e) => {
+  const clickedOutside = !dialogInner.contains(e.target) && !mobileMenuBtn.contains(e.target);
+  if (clickedOutside) {
+    dialog.close();
+    hideMobileDropdowns();
+  }
+});
+
+dialog.addEventListener("close", () => hideMobileDropdowns());
