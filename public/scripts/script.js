@@ -40,21 +40,17 @@ document.addEventListener("DOMContentLoaded", () =>
 /* MOBILE */
 
 const mobileMenuBtn = document.querySelector("#mobile-menu-btn");
-const mobileImg = document.querySelector("#mobile-img");
 const dialog = document.querySelector("dialog");
-
-const toggleMobileMenuIcon = () => {
-  const burgerImgSrc = "./assets/svg/burger.svg";
-  const closeImgSrc = "./assets/svg/close.svg";
-  if (mobileImg.src.includes("burger.svg")) mobileImg.src = closeImgSrc;
-  else mobileImg.src = burgerImgSrc;
-};
+const dialogCloseBtn = document.querySelector("#dialog-close-btn")
 
 const toggleMobileMenu = () => {
   dialog.showModal()
 }
 
 mobileMenuBtn.addEventListener("click", () => {
-  toggleMobileMenuIcon();
   toggleMobileMenu()
 });
+
+dialogCloseBtn.addEventListener('click', () => {
+  dialog.close();
+})
