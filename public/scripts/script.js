@@ -7,18 +7,30 @@ const companyDropdown = document.querySelector("#company-dropdown");
 
 const mouseLeaveDelay = 100;
 
+const toggleArrows = (el) => {
+  const path = "./assets/images/icon-arrow-";
+  const format = ".svg";
+  if (el.src.includes("down")) el.src = `${path}up${format}`;
+  else el.src = `${path}down${format}`;
+}
+
 const setupDropdownEventListeners = () => {
   const addDropdownEventListeners = (menuItem, dropdown) => {
     let dropdownTimeout;
+    const arrow = menuItem.querySelector("img");
 
     menuItem.addEventListener("mouseenter", () => {
       clearTimeout(dropdownTimeout);
+      toggleArrows(arrow);
       dropdown.classList.remove("hidden");
     });
 
     menuItem.addEventListener("mouseleave", () => {
       dropdownTimeout = setTimeout(
-        () => dropdown.classList.add("hidden"),
+        () => {
+          dropdown.classList.add("hidden");
+          toggleArrows(arrow);
+        },
         mouseLeaveDelay
       );
     });
@@ -58,10 +70,23 @@ dialogCloseBtn.addEventListener("click", () => {
 });
 
 // Dropdowns toggle
-const toggleMobileDropdown = (el) => el.classList.toggle("hidden");
+const toggleMobileDropdown = (el) => {
+  el.classList.toggle("hidden");
+};
 
-mobileFeaturesMenuItem.addEventListener("click", () => toggleMobileDropdown(mobileFeaturesDropdown));
-mobileCompanyMenuItem.addEventListener("click", () => toggleMobileDropdown(mobileCompanyDropdown));
+const handleClick = (menuItem, dropdown) => {
+  const arrow = menuItem.querySelector("img");
+  toggleMobileDropdown(dropdown);
+  toggleArrows(arrow);
+}
+
+mobileFeaturesMenuItem.addEventListener("click", () => {
+  handleClick(mobileFeaturesMenuItem, mobileFeaturesDropdown)
+});
+
+mobileCompanyMenuItem.addEventListener("click", () => {
+  handleClick(mobileCompanyMenuItem, mobileCompanyDropdown)
+});
 
 // Outclick closing
 document.addEventListener("click", (e) => {
