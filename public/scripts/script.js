@@ -7,11 +7,6 @@ const companyDropdown = document.querySelector("#company-dropdown");
 
 const mouseLeaveDelay = 100;
 
-const toggleDropdown = (dropdownId) => {
-  const dropdown = document.querySelector(`#${dropdownId}`);
-  dropdown.classList.toggle("hidden");
-};
-
 const setupDropdownEventListeners = () => {
   const addDropdownEventListeners = (menuItem, dropdown) => {
     let dropdownTimeout;
