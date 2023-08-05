@@ -7,13 +7,6 @@ const companyDropdown = document.querySelector("#company-dropdown");
 
 const mouseLeaveDelay = 100;
 
-const toggleArrows = (el) => {
-  const path = "./assets/images/icon-arrow-";
-  const format = ".svg";
-  if (el.src.includes("down")) el.src = `${path}up${format}`;
-  else el.src = `${path}down${format}`;
-}
-
 const setupDropdownEventListeners = () => {
   const addDropdownEventListeners = (menuItem, dropdown) => {
     let dropdownTimeout;
@@ -21,7 +14,7 @@ const setupDropdownEventListeners = () => {
 
     menuItem.addEventListener("mouseenter", () => {
       clearTimeout(dropdownTimeout);
-      toggleArrows(arrow);
+      arrow.src = `./assets/images/icon-arrow-up.svg`;
       dropdown.classList.remove("hidden");
     });
 
@@ -29,7 +22,7 @@ const setupDropdownEventListeners = () => {
       dropdownTimeout = setTimeout(
         () => {
           dropdown.classList.add("hidden");
-          toggleArrows(arrow);
+          arrow.src = `./assets/images/icon-arrow-down.svg`;
         },
         mouseLeaveDelay
       );
@@ -73,6 +66,13 @@ dialogCloseBtn.addEventListener("click", () => {
 const toggleMobileDropdown = (el) => {
   el.classList.toggle("hidden");
 };
+
+const toggleArrows = (el) => {
+  const path = "./assets/images/icon-arrow-";
+  const format = ".svg";
+  if (el.src.includes("down")) el.src = `${path}up${format}`;
+  else el.src = `${path}down${format}`;
+}
 
 const handleClick = (menuItem, dropdown) => {
   const arrow = menuItem.querySelector("img");
