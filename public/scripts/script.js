@@ -40,9 +40,9 @@ const setupDropdownEventListeners = () => {
   addDropdownEventListeners(companyMenuItem, companyDropdown);
 };
 
-document.addEventListener("DOMContentLoaded", () =>
+document.addEventListener("DOMContentLoaded", () => {
   setupDropdownEventListeners()
-);
+});
 
 /* MOBILE */
 const mobileMenuBtn = document.querySelector("#mobile-menu-btn");
