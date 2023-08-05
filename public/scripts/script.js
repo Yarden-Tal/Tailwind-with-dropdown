@@ -10,12 +10,8 @@ const mouseLeaveDelay = 100;
 const toggleArrows = (el) => {
   const path = "./assets/images/icon-arrow-";
   const format = ".svg";
-  setTimeout(() => {
-    if (el.src.includes("down")) el.src = `${path}up${format}`;
-    else el.src = `${path}down${format}`;
-    setTimeout(() => el.classList.toggle("animate-ping"), 500);
-    el.classList.toggle("animate-ping")
-  }, mouseLeaveDelay);
+  if (el.src.includes("down")) el.src = `${path}up${format}`;
+  else el.src = `${path}down${format}`;
 }
 
 const setupDropdownEventListeners = () => {
